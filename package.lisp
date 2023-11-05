@@ -1,5 +1,5 @@
 (defpackage :2d-geometry
-  (:nicknames :geometry :cl-geometry)
+  (:nicknames :geometry :cl-geometry2)
   (:use :common-lisp :iterate :ramarren-utils)
   (:export #:distance
            #:circumference-circle
@@ -15,17 +15,20 @@
            #:perimeter-rectangle
            #:area-square
            #:perimeter-square
+
            #:point
-            #:x #:y
-            #:point-equal-p
+           #:x #:y
+           #:point-equal-p
+	   #:make-point
+	   
            #:line-segment
-            #:start
-            #:end
+           #:start
+           #:end
            #:line
-            #:A #:B #:C
+           #:A #:B #:C
            #:polygon
-            #:point-list
-            #:edge-list
+           #:point-list
+           #:edge-list
            #:line-y-at-x #:line-x-at-y
            #:line-from-segment
            #:line-segment-length
@@ -57,4 +60,16 @@
            #:make-polygon-from-point-ring
            #:coords-to-points
            #:make-polygon-from-coords
-           #:polygon-difference-nary))
+           #:polygon-difference-nary
+
+	   #:bounding-box
+	   #:x-min
+	   #:x-max
+	   #:y-min
+	   #:y-max
+	   #:construct-bounding-box
+	   #:bounding-boxes-intersect-p
+	   #:point-in-box-exclusive
+	   #:point-in-box-inclusive
+	   #:intersect-boxes
+	   ))

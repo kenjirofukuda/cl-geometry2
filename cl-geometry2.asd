@@ -1,4 +1,4 @@
-(asdf:defsystem :cl-geometry
+(asdf:defsystem :cl-geometry2
   :description "Library for two dimensional geometry."
   :version "0.0.3"
   :licence "BSD-style"
